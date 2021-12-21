@@ -5,6 +5,7 @@ const { setServers } = require('dns')
 const hbs=require('hbs')
 const { readdirSync } = require('fs')
 const serv=express()
+const p=process.env.PORT || 3000
 
 const j=path.join(__dirname,'../public')
 const p=path.join(__dirname,'../partials')
@@ -70,6 +71,6 @@ serv.get('*',(req,res)=>{
 })
 
 
-serv.listen(3000,()=>{
-    console.log('server started')
+serv.listen(p,()=>{
+    console.log('server started at '+p)
 })

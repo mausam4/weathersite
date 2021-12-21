@@ -18,7 +18,7 @@ el.addEventListener('submit',(e)=>{
     e.preventDefault()
     const loc=sb.value
     console.log(loc)
-    fetch('http://localhost:3000/weather?address='+loc+'').then((response)=>{
+    fetch('/weather?address='+loc+'').then((response)=>{
     response.json().then((data)=>{
          console.log(data.temp)
          const a=data.temp
